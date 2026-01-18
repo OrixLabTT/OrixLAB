@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Clientes | ORIXLAB</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="LOGO.png" alt="Logo ORIXLAB" class="logo-img">
+                <div class="logo-info">
+                    <span class="logo-text">ORIX<span>LAB</span></span>
+                    <span class="logo-tagline">Tu tecnología en las mejores manos.</span>
+                </div>
+            </a>
+            <ul>
+                <li><a href="index.html#servicios">Servicios</a></li>
+                <li><a href="index.html#mejoras">Mejoras</a></li>
+                <li><a href="index.html#clientes">Clientes</a></li>
+                <li><a href="index.html#cotizar" class="btn-contacto">Cotizar</a></li>
+                <li><a href="index.html#contacto" class="btn-contacto">Contactame</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- SECCIÓN GALERÍA COMPLETA DE CLIENTES -->
+    <section id="galeria-clientes" class="gallery-section">
+        <h2>Todos Nuestros Clientes</h2>
+        <p class="section-subtitle">Explora toda nuestra galería de clientes y trabajos realizados</p>
+        
+        <div class="testimonials-container">
+            <!-- Caso 1 -->
+            <div class="case-row">
+                <div class="case-model">
+                    <span class="model-label">Modelo:</span>
+                    <span class="model-value">Dell XPS 13</span>
+                </div>
+                <div class="case-image">
+                    <h4>Antes</h4>
+                    <div class="images-grid">
+                        <img src="" alt="Antes 1" class="testimonial-image thumbnail" onclick="openLightbox(this)">
+                        <img src="" alt="Antes 2" class="testimonial-image thumbnail" onclick="openLightbox(this)">
+                        <img src="" alt="Antes 3" class="testimonial-image thumbnail" onclick="openLightbox(this)">
+                    </div>
+                </div>
+                <div class="case-image">
+                    <h4>Después</h4>
+                    <div class="images-grid">
+                        <img src="" alt="Después 1" class="testimonial-image thumbnail" onclick="openLightbox(this)">
+                        <img src="" alt="Después 2" class="testimonial-image thumbnail" onclick="openLightbox(this)">
+                        <img src="" alt="Después 3" class="testimonial-image thumbnail" onclick="openLightbox(this)">
+                    </div>
+                </div>
+                <div class="case-opinion">
+                    <h4>Opinión</h4>
+                    <div class="opinion-content" onclick="openOpinionModal(this)" style="cursor: pointer;">
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="opinion-text">Hace todo perfecto este we lo amo</p>
+                        <p class="client-name">- Cliente 1</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Caso 2 -->
+            <div class="case-row">
+                <div class="case-model">
+                    <span class="model-label">Laptop</span>
+                    <span class="model-value">HP Pavilion 15</span>
+                </div>
+                <div class="case-image">
+                    <h4>Antes</h4>
+                    <div class="images-grid">
+                        <img src="" alt="Antes 1" class="testimonial-image thumbnail" onclick="openLightbox(this)">
+                        <img src="" alt="Antes 2" class="testimonial-image thumbnail" onclick="openLightbox(this)">
+                        <img src="" alt="Antes 3" class="testimonial-image thumbnail" onclick="openLightbox(this)">
+                    </div>
+                </div>
+                <div class="case-image">
+                    <h4>Después</h4>
+                    <div class="images-grid">
+                        <img src="" alt="Después 1" class="testimonial-image thumbnail" onclick="openLightbox(this)">
+                        <img src="" alt="Después 2" class="testimonial-image thumbnail" onclick="openLightbox(this)">
+                        <img src="" alt="Después 3" class="testimonial-image thumbnail" onclick="openLightbox(this)">
+                    </div>
+                </div>
+                <div class="case-opinion">
+                    <h4>Opinión</h4>
+                    <div class="opinion-content" onclick="openOpinionModal(this)" style="cursor: pointer;">
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="opinion-text">Hace todo perfecto este we lo amo</p>
+                        <p class="client-name">- Cliente 2</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Caso 3 -->
+            <div class="case-row">
+                <div class="case-model">
+                    <span class="model-label">Xbox</span>
+                    <span class="model-value">Series S</span>
+                </div>
+                <div class="case-image">
+                    <h4>Antes</h4>
+                    <div class="images-grid">
+                        <img src="" alt="Antes 1" class="testimonial-image thumbnail" onclick="openLightbox(this)">
+                        <img src="" alt="Antes 2" class="testimonial-image thumbnail" onclick="openLightbox(this)">
+                        <img src="" alt="Antes 3" class="testimonial-image thumbnail" onclick="openLightbox(this)">
+                    </div>
+                </div>
+                <div class="case-image">
+                    <h4>Después</h4>
+                    <div class="images-grid">
+                        <img src="" alt="Después 1" class="testimonial-image thumbnail" onclick="openLightbox(this)">
+                        <img src="" alt="Después 2" class="testimonial-image thumbnail" onclick="openLightbox(this)">
+                        <img src="" alt="Después 3" class="testimonial-image thumbnail" onclick="openLightbox(this)">
+                    </div>
+                </div>
+                <div class="case-opinion">
+                    <h4>Opinión</h4>
+                    <div class="opinion-content" onclick="openOpinionModal(this)" style="cursor: pointer;">
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="opinion-text">Hace todo perfecto este we lo amo</p>
+                        <p class="client-name">- Cliente 3</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Caso 4 -->
+            <div class="case-row">
+                <div class="case-model">
+                    <span class="model-label">Playstation</span>
+                    <span class="model-value">4</span>
+                </div>
+                <div class="case-image">
+                    <h4>Antes</h4>
+                    <div class="images-grid">
+                        <img src="" alt="Antes 1" class="testimonial-image thumbnail" onclick="openLightbox(this)">
+                        <img src="" alt="Antes 2" class="testimonial-image thumbnail" onclick="openLightbox(this)">
+                        <img src="" alt="Antes 3" class="testimonial-image thumbnail" onclick="openLightbox(this)">
+                    </div>
+                </div>
+                <div class="case-image">
+                    <h4>Después</h4>
+                    <div class="images-grid">
+                        <img src="" alt="Después 1" class="testimonial-image thumbnail" onclick="openLightbox(this)">
+                        <img src="" alt="Después 2" class="testimonial-image thumbnail" onclick="openLightbox(this)">
+                        <img src="" alt="Después 3" class="testimonial-image thumbnail" onclick="openLightbox(this)">
+                    </div>
+                </div>
+                <div class="case-opinion">
+                    <h4>Opinión</h4>
+                    <div class="opinion-content" onclick="openOpinionModal(this)" style="cursor: pointer;">
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="opinion-text">Hace todo perfecto este we lo amo</p>
+                        <p class="client-name">- Cliente 4</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <!-- Caso 5 -->
+            <div class="case-row">
+                <div class="case-model">
+                    <span class="model-label">Modelo:</span>
+                    <span class="model-value">Apple MacBook Air</span>
+                </div>
+                <div class="case-image">
+                    <h4>Antes</h4>
+                    <div class="images-grid">
+                        <img src="" alt="Antes 1" class="testimonial-image thumbnail" onclick="openLightbox(this)">
+                        <img src="" alt="Antes 2" class="testimonial-image thumbnail" onclick="openLightbox(this)">
+                        <img src="" alt="Antes 3" class="testimonial-image thumbnail" onclick="openLightbox(this)">
+                    </div>
+                </div>
+                <div class="case-image">
+                    <h4>Después</h4>
+                    <div class="images-grid">
+                        <img src="" alt="Después 1" class="testimonial-image thumbnail" onclick="openLightbox(this)">
+                        <img src="" alt="Después 2" class="testimonial-image thumbnail" onclick="openLightbox(this)">
+                        <img src="" alt="Después 3" class="testimonial-image thumbnail" onclick="openLightbox(this)">
+                    </div>
+                </div>
+                <div class="case-opinion">
+                    <h4>Opinión</h4>
+                    <div class="opinion-content" onclick="openOpinionModal(this)" style="cursor: pointer;">
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="opinion-text">Hace todo perfecto este we lo amo</p>
+                        <p class="client-name">- Cliente 5</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Caso 6 -->
+            <div class="case-row">
+                <div class="case-model">
+                    <span class="model-label">Modelo:</span>
+                    <span class="model-value">HP Envy x360</span>
+                </div>
+                <div class="case-image">
+                    <h4>Antes</h4>
+                    <div class="images-grid">
+                        <img src="" alt="Antes 1" class="testimonial-image thumbnail" onclick="openLightbox(this)">
+                        <img src="" alt="Antes 2" class="testimonial-image thumbnail" onclick="openLightbox(this)">
+                        <img src="" alt="Antes 3" class="testimonial-image thumbnail" onclick="openLightbox(this)">
+                    </div>
+                </div>
+                <div class="case-image">
+                    <h4>Después</h4>
+                    <div class="images-grid">
+                        <img src="" alt="Después 1" class="testimonial-image thumbnail" onclick="openLightbox(this)">
+                        <img src="" alt="Después 2" class="testimonial-image thumbnail" onclick="openLightbox(this)">
+                        <img src="" alt="Después 3" class="testimonial-image thumbnail" onclick="openLightbox(this)">
+                    </div>
+                </div>
+                <div class="case-opinion">
+                    <h4>Opinión</h4>
+                    <div class="opinion-content" onclick="openOpinionModal(this)" style="cursor: pointer;">
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="opinion-text">Hace todo perfecto este we lo amo</p>
+                        <p class="client-name">- Cliente 6</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Agrega más casos aquí según necesites -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 ORIXLAB - Tu tecnología en las mejores manos</p>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="if(event.target === this) closeLightbox()">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <div class="lightbox-content">
+            <img id="lightbox-image" src="" alt="Imagen ampliada">
+        </div>
+    </div>
+
+    <!-- Modal para Opiniones -->
+    <div id="opinionModal" class="opinion-modal" onclick="if(event.target === this) closeOpinionModal()">
+        <span class="opinion-modal-close" onclick="closeOpinionModal()">&times;</span>
+        <div class="opinion-modal-content">
+            <div id="opinionDisplay"></div>
+        </div>
+    </div>
+
+    <script>
+        function openLightbox(element) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightbox-image');
+            lightboxImage.src = element.src;
+            lightbox.style.display = 'flex';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.style.display = 'none';
+        }
+
+        // Cerrar lightbox con tecla Escape
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeLightbox();
+                closeOpinionModal();
+            }
+        });
+
+        function openOpinionModal(element) {
+            const modal = document.getElementById('opinionModal');
+            const opinionDisplay = document.getElementById('opinionDisplay');
+            
+            // Clonar el contenido de la opinión
+            const clonedOpinion = element.cloneNode(true);
+            clonedOpinion.style.cursor = 'default';
+            
+            opinionDisplay.innerHTML = '';
+            opinionDisplay.appendChild(clonedOpinion);
+            
+            modal.style.display = 'flex';
+        }
+
+        function closeOpinionModal() {
+            const modal = document.getElementById('opinionModal');
+            modal.style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>

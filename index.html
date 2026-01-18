@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORIXLAB | Mantenimiento Tech</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="#home" class="logo">
+                <img src="LOGO.png" alt="Logo ORIXLAB" class="logo-img">
+                <div class="logo-info">
+                    <span class="logo-text">ORIX<span>LAB</span></span>
+                    <span class="logo-tagline">Tu tecnología en las mejores manos.</span>
+                </div>
+            </a>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#servicios" onclick="closeMobileMenu()">Servicios</a></li>
+                <li><a href="#mejoras" onclick="closeMobileMenu()">Mejoras</a></li>
+                <li><a href="#cotizar" class="btn-contacto" onclick="closeMobileMenu()">Cotizar</a></li>
+                <li><a href="#video" onclick="closeMobileMenu()">Último Video</a></li>
+                <li><a href="#contacto" class="btn-contacto" onclick="closeMobileMenu()">Contactame</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <img src="LOGO.png" alt="Logo ORIXLAB" class="hero-logo">
+            <h1>Experto en <span class="highlight">Laptops</span>, <span class="highlight-alt">Xbox</span> & <span class="highlight">PlayStation</span></h1>
+            <p>Mantenimiento profesional correctivo y preventivo</p>
+            <a href="#servicios" class="btn-main">Ver Servicios</a>
+        </div>
+    </section>
+
+    <section id="servicios" class="services">
+        <h2>Nuestros Servicios</h2>
+        <div class="cards">
+            <div class="card" onclick="openServiceModal('Laptops', 'Ofrecemos limpieza profunda profesional, cambio de pasta térmica de alta calidad, y upgrades de SSD/RAM para mejorar significativamente el rendimiento de tu laptop. Trabajamos con todas las marcas: HP, Dell, Lenovo, Asus, Acer y más.')" style="cursor: pointer;">
+                <div class="icon">💻</div>
+                <h3>Laptops</h3>
+                <p>Limpieza profunda, cambio de pasta térmica y upgrades de SSD/RAM.</p>
+            </div>
+            <div class="card" onclick="openServiceModal('Xbox', 'Somos especialistas en consolas Xbox (Series X, Series S, One X, One S). Realizamos limpieza profunda y cambio de pasta térmica. Olvídate del ruido de turbina y el sobrecalentamiento.')" style="cursor: pointer;">
+                <div class="icon">🎮</div>
+                <h3>Xbox</h3>
+                <p>Especialistas en Xbox. Olvídate del ruido de turbina y el sobrecalentamiento.</p>
+            </div>
+            <div class="card" onclick="openServiceModal('PlayStation', 'Mantenimiento profesional para PS4 y PS5. Incluye limpieza completa del sistema de ventilación y cambio de pasta térmica. Tu consola volverá a funcionar como nueva.')" style="cursor: pointer;">
+                <div class="icon">🕹️</div>
+                <h3>PlayStation</h3>
+                <p>Mantenimiento profesional para PS4 y PS5. Reparación de ventiladores y disipadores.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="mejoras" class="upgrades">
+        <h2>Mejoras</h2>
+        <p class="section-subtitle">Potencia tu equipo con nuestros servicios</p>
+        <div class="upgrades-grid">
+            <div class="upgrade-item" onclick="openServiceModal('Aumentar RAM', 'Amplía la memoria RAM de tu laptop para obtener mejor rendimiento en multitarea, edición de video, gaming y programación. Instalamos memoria compatible con tu equipo y te asesoramos sobre la mejor opción según tus necesidades.')" style="cursor: pointer;">
+                <div class="upgrade-icon">📈</div>
+                <h3>Aumentar RAM</h3>
+                <p>Amplía la memoria RAM de tu laptop para mejor rendimiento en multitarea y gaming.</p>
+            </div>
+            <div class="upgrade-item" onclick="openServiceModal('Aumentar Almacenamiento', 'Instala nuevos SSD o HDD tradicionales para más espacio de almacenamiento. Incluye transferencia completa de todos tus datos, sistema operativo y configuraciones. Tu equipo arrancará mucho más rápido con un SSD.')" style="cursor: pointer;">
+                <div class="upgrade-icon">💾</div>
+                <h3>Aumentar Espacio de Almacenamiento</h3>
+                <p>Instala nuevos SSD o HDD para más espacio. Transferencia de datos incluida.</p>
+            </div>
+            <div class="upgrade-item" onclick="openServiceModal('Mejorar Refrigeración', 'Aplicamos pasta térmica profesional de alta calidad (Arctic MX-4,Arctic MX-6 o Thermal Grizzly), limpieza profunda de disipadores y ventiladores. Reduce las temperaturas hasta 20°C y mejora el rendimiento general de tu equipo.')" style="cursor: pointer;">
+                <div class="upgrade-icon">❄️</div>
+                <h3>Mejorar Refrigeración</h3>
+                <p>Pasta térmica profesional y limpieza de disipadores para temperaturas óptimas.</p>
+            </div>
+            <div class="upgrade-item" onclick="openServiceModal('Cambio de Batería', 'Reemplaza tu batería agotada por una nueva compatible con tu modelo. Contamos con baterías originales y compatibles de alta calidad. Modelos disponibles incluyen HT03XL, L15M4PC2, MU06 y muchos más. Consulta disponibilidad para tu laptop.')" style="cursor: pointer;">
+                <div class="upgrade-icon">⚙️</div>
+                <h3>Cambio de Batería</h3>
+                <p>Reemplaza tu batería agotada por una original o compatible de una excelente calidad.</p>
+            </div>
+            <div class="upgrade-item" onclick="openServiceModal('Mantenimiento', 'Ofrecemos mantenimiento preventivo para evitar problemas futuros (limpieza, actualización de drivers, optimización) y correctivo para solucionar daños existentes. Diagnóstico gratuito incluido.')" style="cursor: pointer;">
+                <div class="upgrade-icon">🛠️</div>
+                <h3>Mantenimiento Preventivo y Correctivo</h3>
+                <p>Mantenimiento preventivo para evitar problemas futuros o correctivo para solucionar daños existentes en tu equipo.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="cotizar" class="quote-section">
+        <h2>Solicita tu Cotización</h2>
+        <p class="section-subtitle">Cuéntame sobre tu dispositivo y qué necesitas</p>
+        <form class="quote-form" id="quoteForm">
+            <div class="form-group">
+                <label for="device">¿Qué dispositivo tienes?</label>
+                <select id="device" name="device" required onchange="updateServiceOptions()">
+                    <option value="">-- Selecciona un dispositivo --</option>
+                    <option value="laptop">Laptop</option>
+                    <option value="xbox">Xbox</option>
+                    <option value="playstation">PlayStation</option>
+                </select>
+            </div>
+
+            <div class="form-group" id="modelGroup" style="display:none;">
+                <label for="model" id="modelLabel">Modelo de la Laptop</label>
+                
+                <div id="laptopModelGroup" style="display:none;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                        <label for="modelText">Especifica tu modelo</label>
+                        <a href="#" class="help-link" onclick="openModelTutorial(event)">¿Cómo saber el modelo?</a>
+                    </div>
+                    <input type="text" id="modelText" name="modelText" placeholder="Ej: HP Pavilion 15, Dell XPS 13...">
+                </div>
+
+                <div id="xboxModelGroup" style="display:none;">
+                    <select id="xboxModel" name="xboxModel">
+                        <option value="">-- Selecciona tu Xbox --</option>
+                        <option value="xbox-series-x">Xbox Series X</option>
+                        <option value="xbox-series-s">Xbox Series S</option>
+                        <option value="xbox-one-x">Xbox One X</option>
+                        <option value="xbox-one-s">Xbox One S</option>
+                        <option value="xbox-otro">Otro</option>
+                    </select>
+                </div>
+
+                <div id="playstationModelGroup" style="display:none;">
+                    <select id="psModel" name="psModel">
+                        <option value="">-- Selecciona tu PlayStation --</option>
+                        <option value="ps5">PlayStation 5</option>
+                        <option value="ps4-pro">PlayStation 4 Pro</option>
+                        <option value="ps4">PlayStation 4</option>
+                        <option value="ps-otro">Otro</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="service">¿Qué quieres hacerle?</label>
+                <select id="service" name="service" required>
+                    <option value="">-- Selecciona un servicio --</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="name">Tu nombre</label>
+                <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Tu número de teléfono</label>
+                <input type="tel" id="phone" name="phone" placeholder="+52 (012) 345-6789" required>
+            </div>
+
+            <button type="submit" class="submit-btn" id="submitBtn">Enviar Cotización</button>
+        </form>
+    </section>
+
+    <section id="video" class="video-section">
+        <h2>Nuestro Último Video</h2>
+        <p class="section-subtitle">Mira mi última reparación en acción</p>
+        
+        <div class="video-container">
+            <div class="video-wrapper">
+                <!-- Aquí puedes pegar el código embed de YouTube, TikTok o el video que quieras -->
+                <iframe 
+                    width="100%" 
+                    height="100%" 
+                    src="" 
+                    title="Último video de reparación" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+                <!-- Para agregar tu video, reemplaza el src="" con el link del video embed -->
+            </div>
+            <p class="video-note">📹 Puedes ver más contenido en mis redes sociales</p>
+        </div>
+    </section>
+
+    <section id="contacto" class="contact">
+        <h2>Contactame</h2>
+        <p class="section-subtitle">Ponte en contacto conmigo por tu medio preferido</p>
+        <div class="contact-buttons">
+            <a href="https://wa.me/522221544248?text=Hola,%20me%20interesa%20un%20servicio" target="_blank" class="contact-btn whatsapp">
+                <img src="WHATSAPP.png" alt="WhatsApp" class="contact-icon-img">
+                <span>WhatsApp</span>
+            </a>
+            <a href="mailto:orixlabtt@gmail.com?subject=Hola%20me%20interesa%20un%20servicio" class="contact-btn email">
+                <img src="GMAIL.png" alt="Gmail" class="contact-icon-img">
+                <span>Correo</span>
+            </a>
+            <a href="https://www.instagram.com/orix_lab" target="_blank" class="contact-btn instagram">
+                <img src="INSTAGRAM.png" alt="Instagram" class="contact-icon-img">
+                <span>Instagram</span>
+            </a>
+            <a href="https://www.tiktok.com/@orixlab" target="_blank" class="contact-btn tiktok">
+                <img src="TIKTOK.png" alt="TikTok" class="contact-icon-img">
+                <span>TikTok</span>
+            </a>
+        </div>
+    </section>
+
+    <div id="modelTutorialModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeModelTutorial()">&times;</span>
+            <h3>¿Cómo encontrar el modelo de tu Laptop?</h3>
+            <div class="tutorial-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Abre el Cuadro de Diálogo Ejecutar</h4>
+                        <p>Presiona <strong>Windows + R</strong> en tu teclado</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Escribe el comando</h4>
+                        <p>Escribe <strong>msinfo32</strong> en el cuadro que aparece y presiona Enter</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Busca la información</h4>
+                        <p>Se abrirá una ventana. Busca el campo <strong>"System Model"</strong> o <strong>"Modelo del sistema"</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="lightbox" class="lightbox" onclick="if(event.target === this) closeLightbox()">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <div class="lightbox-content">
+            <img id="lightbox-image" src="" alt="Imagen ampliada">
+        </div>
+    </div>
+
+    <div id="opinionModal" class="opinion-modal" onclick="if(event.target === this) closeOpinionModal()">
+        <span class="opinion-modal-close" onclick="closeOpinionModal()">&times;</span>
+        <div class="opinion-modal-content">
+            <div id="opinionDisplay"></div>
+        </div>
+    </div>
+
+    <div id="serviceModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeServiceModal()">&times;</span>
+            <h3 id="serviceModalTitle"></h3>
+            <p id="serviceModalDescription" style="line-height: 1.8; color: #cbd5e1; margin: 2rem 0;"></p>
+            <button onclick="goToQuote()" class="submit-btn" style="width: auto; padding: 1rem 2.5rem;">Cotizar Ahora</button>
+        </div>
+    </div>
+
+    <!-- SECCIÓN CLIENTES (DESACTIVADA) -->
+    <!-- <section id="clientes" class="clients-section">
+        <h2>¿Quieres ver nuestro trabajo?</h2>
+        <p class="section-subtitle">Mira la galería completa de todos nuestros clientes y trabajos realizados</p>
+        <a href="galeria.html" target="_blank" class="view-clients-btn">Ver Clientes</a>
+    </section> -->
+
+    <footer>
+        <p>&copy; 2026 ORIXLAB - Tu tecnología en las mejores manos.</p>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const navMenu = document.querySelector('.nav-menu');
+            const menuToggle = document.querySelector('.mobile-menu-toggle');
+            navMenu.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        }
+
+        function closeMobileMenu() {
+            const navMenu = document.querySelector('.nav-menu');
+            const menuToggle = document.querySelector('.mobile-menu-toggle');
+            navMenu.classList.remove('active');
+            menuToggle.classList.remove('active');
+        }
+
+        function openModelTutorial(event) {
+            event.preventDefault();
+            document.getElementById('modelTutorialModal').style.display = 'block';
+        }
+
+        function closeModelTutorial() {
+            document.getElementById('modelTutorialModal').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('modelTutorialModal');
+            const serviceModal = document.getElementById('serviceModal');
+            if (event.target == modal) { modal.style.display = 'none'; }
+            if (event.target == serviceModal) { closeServiceModal(); }
+        }
+
+        function openServiceModal(title, description) {
+            document.getElementById('serviceModalTitle').textContent = title;
+            document.getElementById('serviceModalDescription').textContent = description;
+            document.getElementById('serviceModal').style.display = 'block';
+        }
+
+        function closeServiceModal() {
+            document.getElementById('serviceModal').style.display = 'none';
+        }
+
+        function goToQuote() {
+            closeServiceModal();
+            window.location.href = '#cotizar';
+        }
+
+        function updateServiceOptions() {
+            const device = document.getElementById('device').value;
+            const modelGroup = document.getElementById('modelGroup');
+            const modelLabel = document.getElementById('modelLabel');
+            const laptopModelGroup = document.getElementById('laptopModelGroup');
+            const xboxModelGroup = document.getElementById('xboxModelGroup');
+            const playstationModelGroup = document.getElementById('playstationModelGroup');
+            const serviceSelect = document.getElementById('service');
+            
+            // Limpiar opciones actuales excepto la primera
+            serviceSelect.innerHTML = '<option value="">-- Selecciona un servicio --</option>';
+            
+            if (device === 'laptop') {
+                modelGroup.style.display = 'block';
+                laptopModelGroup.style.display = 'block';
+                xboxModelGroup.style.display = 'none';
+                playstationModelGroup.style.display = 'none';
+                modelLabel.textContent = 'Modelo de la Laptop';
+                
+                // Agregar opciones de laptop
+                const laptopOptions = [
+                    { value: 'ram', text: 'Aumentar RAM' },
+                    { value: 'almacenamiento', text: 'Aumentar almacenamiento' },
+                    { value: 'bateria', text: 'Cambio de batería' },
+                    { value: 'software', text: 'Mantenimiento' },
+                    { value: 'otro', text: 'Otro' }
+                ];
+                
+                laptopOptions.forEach(opt => {
+                    const option = document.createElement('option');
+                    option.value = opt.value;
+                    option.textContent = opt.text;
+                    serviceSelect.appendChild(option);
+                });
+                
+            } else if (device === 'xbox') {
+                modelGroup.style.display = 'block';
+                laptopModelGroup.style.display = 'none';
+                xboxModelGroup.style.display = 'block';
+                playstationModelGroup.style.display = 'none';
+                modelLabel.textContent = 'Modelo de Xbox';
+                
+                // Solo mantenimiento para Xbox
+                const option = document.createElement('option');
+                option.value = 'mantenimiento';
+                option.textContent = 'Mantenimiento';
+                option.selected = true;
+                serviceSelect.appendChild(option);
+                
+            } else if (device === 'playstation') {
+                modelGroup.style.display = 'block';
+                laptopModelGroup.style.display = 'none';
+                xboxModelGroup.style.display = 'none';
+                playstationModelGroup.style.display = 'block';
+                modelLabel.textContent = 'Modelo de PlayStation';
+                
+                // Solo mantenimiento para PlayStation
+                const option = document.createElement('option');
+                option.value = 'mantenimiento';
+                option.textContent = 'Mantenimiento';
+                option.selected = true;
+                serviceSelect.appendChild(option);
+                
+            } else {
+                modelGroup.style.display = 'none';
+            }
+        }
+
+        // --- LÓGICA DE GOOGLE SHEETS ---
+        document.getElementById('quoteForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const btn = document.getElementById('submitBtn');
+            const originalText = btn.innerText;
+            btn.innerText = 'Enviando...';
+            btn.disabled = true;
+
+            const device = document.getElementById('device').value;
+            let model = '';
+            if (device === 'laptop') model = document.getElementById('modelText').value;
+            else if (device === 'xbox') model = document.getElementById('xboxModel').value;
+            else if (device === 'playstation') model = document.getElementById('psModel').value;
+
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbyj9Zu8WaE-JxKUNtey-bgviDkHjWVuhkC8QBJznc-CtcAULHCes2U7ZaRyMVjphcm-XA/exec';
+            
+            const formData = {
+                'Dispositivo': device,
+                'Modelo': model,
+                'Servicio': document.getElementById('service').value,
+                'Nombre': document.getElementById('name').value,
+                'Teléfono': document.getElementById('phone').value
+            };
+
+            // Método universal usando XMLHttpRequest (compatible con PC y móviles)
+            const xhr = new XMLHttpRequest();
+            xhr.open('POST', scriptURL, true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            
+            // Convertir a formato URL encoded
+            const params = Object.keys(formData).map(key => 
+                encodeURIComponent(key) + '=' + encodeURIComponent(formData[key])
+            ).join('&');
+
+            xhr.onload = function() {
+                setTimeout(() => {
+                    alert('¡Cotización enviada exitosamente! ORIXLAB te contactará pronto.');
+                    document.getElementById('quoteForm').reset();
+                    updateServiceOptions();
+                    btn.innerText = originalText;
+                    btn.disabled = false;
+                }, 500);
+            };
+
+            xhr.onerror = function() {
+                // Si falla, usar método iframe como respaldo
+                console.log('Usando método alternativo iframe...');
+                const iframe = document.createElement('iframe');
+                iframe.style.display = 'none';
+                iframe.name = 'hidden_iframe';
+                document.body.appendChild(iframe);
+
+                const form = document.createElement('form');
+                form.action = scriptURL;
+                form.method = 'POST';
+                form.target = 'hidden_iframe';
+
+                Object.keys(formData).forEach(key => {
+                    const input = document.createElement('input');
+                    input.type = 'hidden';
+                    input.name = key;
+                    input.value = formData[key];
+                    form.appendChild(input);
+                });
+
+                document.body.appendChild(form);
+                form.submit();
+
+                setTimeout(() => {
+                    alert('¡Cotización enviada exitosamente! ORIXLAB te contactará pronto.');
+                    document.getElementById('quoteForm').reset();
+                    updateServiceOptions();
+                    btn.innerText = originalText;
+                    btn.disabled = false;
+                    document.body.removeChild(form);
+                    document.body.removeChild(iframe);
+                }, 2000);
+            };
+
+            xhr.send(params);
+        });
+
+        // --- LÓGICA DE IMÁGENES Y OPINIONES ---
+        function openLightbox(element) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightbox-image');
+            lightboxImage.src = element.src;
+            lightbox.style.display = 'flex';
+        }
+
+        function closeLightbox() { document.getElementById('lightbox').style.display = 'none'; }
+
+        function openOpinionModal(element) {
+            const modal = document.getElementById('opinionModal');
+            const opinionDisplay = document.getElementById('opinionDisplay');
+            const clonedOpinion = element.cloneNode(true);
+            clonedOpinion.style.cursor = 'default';
+            opinionDisplay.innerHTML = '';
+            opinionDisplay.appendChild(clonedOpinion);
+            modal.style.display = 'flex';
+        }
+
+        function closeOpinionModal() { document.getElementById('opinionModal').style.display = 'none'; }
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') { closeLightbox(); closeOpinionModal(); }
+        });
+    </script>
+</body>
+</html>
